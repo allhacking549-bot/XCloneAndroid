@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <!-- Tweet Composer -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:borderBottom="1dp"
+        android:background="@color/black">
+
+        <EditText
+            android:id="@+id/tweet_input"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="What is happening?!"
+            android:textColor="@color/white"
+            android:textColorHint="#808080"
+            android:background="@color/black"
+            android:textSize="16sp"
+            android:gravity="top"
+            android:inputType="textMultiLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:justifyContent="spaceBetween"
+            android:gravity="center_vertical"
+            android:marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/char_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="280"
+                    android:textColor="#808080"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="12dp" />
+
+                <Button
+                    android:id="@+id/post_btn"
+                    android:layout_width="80dp"
+                    android:layout_height="36dp"
+                    android:text="Post"
+                    android:textColor="@color/black"
+                    android:background="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Posts Feed -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/posts_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black" />
+
+</LinearLayout>

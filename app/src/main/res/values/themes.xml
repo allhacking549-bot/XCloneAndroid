@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.XCloneAndroid" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">#1DA1F2</item>
+        <item name="android:windowBackground">#000000</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+</resources>

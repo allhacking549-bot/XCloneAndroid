@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="@color/black">
+
+    <!-- Avatar -->
+    <ImageView
+        android:id="@+id/post_avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_launcher_background"
+        android:scaleType="centerCrop" />
+
+    <!-- Post Content -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="12dp">
+
+        <!-- Header: Author Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:justifyContent="spaceBetween">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/author_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" "
+                    android:textColor="#808080" />
+
+                <TextView
+                    android:id="@+id/author_handle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#808080"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" · "
+                    android:textColor="#808080" />
+
+                <TextView
+                    android:id="@+id/post_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#808080"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Delete Button -->
+            <ImageButton
+                android:id="@+id/delete_btn"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_launcher_background"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Delete" />
+        </LinearLayout>
+
+        <!-- Post Content Text -->
+        <TextView
+            android:id="@+id/post_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="4dp" />
+
+        <!-- Interaction Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="space_around"
+            android:layout_marginTop="12dp">
+
+            <!-- Replies -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:background="@null"
+                    android:contentDescription="Reply" />
+
+                <TextView
+                    android:id="@+id/replies_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#808080"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp" />
+            </LinearLayout>
+
+            <!-- Retweets -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:background="@null"
+                    android:contentDescription="Retweet" />
+
+                <TextView
+                    android:id="@+id/retweets_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#808080"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp" />
+            </LinearLayout>
+
+            <!-- Likes -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/like_btn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:background="@null"
+                    android:contentDescription="Like" />
+
+                <TextView
+                    android:id="@+id/likes_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#808080"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

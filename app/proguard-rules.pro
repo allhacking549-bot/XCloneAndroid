@@ -1,0 +1,3 @@
+-keep class com.example.xclone.** { *; }
+-keepclassmembers class com.example.xclone.Post { *; }
+-keepclassmembers class com.example.xclone.PostAdapter { *; }
